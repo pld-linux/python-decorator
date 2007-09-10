@@ -3,7 +3,7 @@ Summary:	Bunch of nice decorators for Python
 Name:		python-%{module}
 Version:	2.2.0
 Release:	1
-License:	LGPL
+License:	BSD
 Group:		Python/Libraries
 Source0:	http://www.phyast.pitt.edu/~micheles/python/%{module}-%{version}.zip
 # Source0-md5:	4732d42d7b9f1b19de960a84b57a63da
