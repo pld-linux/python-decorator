@@ -1,5 +1,6 @@
 %define module decorator
 Summary:	Bunch of nice decorators for Python
+Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona
 Name:		python-%{module}
 Version:	2.2.0
 Release:	1
@@ -18,6 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Bunch of nice decorators for Python like memoize, tracing,
 redirecting_stdout, locked.
 
+%description -l pl.UTF-8
+Zbiór ładnych dekoratorów dla Pythona: memoize, tracing,
+redirecting_stdout, locked...
+
 %prep
 %setup -qc
 
@@ -28,8 +33,8 @@ redirecting_stdout, locked.
 rm -rf $RPM_BUILD_ROOT
 
 %{__python} setup.py install \
-		--optimize=2 \
-		--root=$RPM_BUILD_ROOT
+	--optimize=2 \
+	--root=$RPM_BUILD_ROOT
 
 %py_postclean
 
@@ -39,4 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc documentation.* README.txt
-%{py_sitescriptdir}/%{module}*
+%{py_sitescriptdir}/decorator*
