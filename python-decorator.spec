@@ -2,14 +2,14 @@
 Summary:	Bunch of nice decorators for Python
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona
 Name:		python-%{module}
-Version:	2.2.0
+Version:	2.3.1
 Release:	1
 License:	BSD
 Group:		Python/Libraries
 Source0:	http://www.phyast.pitt.edu/~micheles/python/%{module}-%{version}.zip
-# Source0-md5:	4732d42d7b9f1b19de960a84b57a63da
+# Source0-md5:	40c2d7a566a5f5264ef8d2a88d9261e9
 URL:		http://www.phyast.pitt.edu/~micheles/python/documentation.html
-BuildRequires:	python-devel
+BuildRequires:	python-devel >= 2.4
 %pyrequires_eq	python-libs
 Requires:	python-pygtk-gtk >= 2.8.4
 BuildArch:	noarch
@@ -43,5 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc documentation.* README.txt
+%doc documentation.* README.txt CHANGES.txt
 %{py_sitescriptdir}/decorator*
