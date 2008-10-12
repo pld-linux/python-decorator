@@ -9,7 +9,7 @@ Group:		Python/Libraries
 Source0:	http://www.phyast.pitt.edu/~micheles/python/%{module}-%{version}.zip
 # Source0-md5:	40c2d7a566a5f5264ef8d2a88d9261e9
 URL:		http://www.phyast.pitt.edu/~micheles/python/documentation.html
-BuildRequires:	python-devel >= 2.4
+BuildRequires:	python-devel >= 1:2.4
 %pyrequires_eq	python-libs
 Requires:	python-pygtk-gtk >= 2.8.4
 BuildArch:	noarch
