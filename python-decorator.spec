@@ -11,7 +11,7 @@ Source0:	http://www.phyast.pitt.edu/~micheles/python/%{module}-%{version}.zip
 URL:		http://www.phyast.pitt.edu/~micheles/python/documentation.html
 BuildRequires:	python-devel >= 1:2.4
 %pyrequires_eq	python-libs
-Requires:	python-pygtk-gtk >= 2.8.4
+Requires:	python-pygtk-gtk >= 2:2.8.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
