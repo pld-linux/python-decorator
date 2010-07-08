@@ -3,7 +3,7 @@ Summary:	Bunch of nice decorators for Python
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona
 Name:		python-%{module}
 Version:	3.0.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Python/Libraries
 Source0:	http://pypi.python.org/packages/source/d/decorator/%{module}-%{version}.tar.gz
