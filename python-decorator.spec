@@ -10,6 +10,8 @@ Source0:	http://pypi.python.org/packages/source/d/decorator/%{module}-%{version}
 # Source0-md5:	c4130a467be7f71154976c84af4a04c6
 URL:		http://pypi.python.org/pypi/decorator/
 BuildRequires:	python-devel >= 1:2.4
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-libs
 Requires:	python-pygtk-gtk >= 2:2.8.4
 BuildArch:	noarch
