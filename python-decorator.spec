@@ -2,18 +2,17 @@
 Summary:	Bunch of nice decorators for Python
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona
 Name:		python-%{module}
-Version:	3.0.1
-Release:	4
+Version:	3.3.3
+Release:	1
 License:	BSD
 Group:		Python/Libraries
 Source0:	http://pypi.python.org/packages/source/d/decorator/%{module}-%{version}.tar.gz
-# Source0-md5:	c4130a467be7f71154976c84af4a04c6
+# Source0-md5:	f5a0227cb1c34a0e7d5b7f9cd2ae3135
 URL:		http://pypi.python.org/pypi/decorator/
 BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-libs
-Requires:	python-pygtk-gtk >= 2:2.8.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,5 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc documentation.* README.txt CHANGES.txt
-%{py_sitescriptdir}/decorator*
+%doc README.txt documentation.py
+%{py_sitescriptdir}/decorator.py[co]
+%{py_sitescriptdir}/decorator-%{version}-py*.egg-info
