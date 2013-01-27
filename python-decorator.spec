@@ -1,18 +1,17 @@
-%define module decorator
+%define		module decorator
 Summary:	Bunch of nice decorators for Python
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona
 Name:		python-%{module}
-Version:	3.3.3
+Version:	3.4.0
 Release:	1
 License:	BSD
-Group:		Python/Libraries
+Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/d/decorator/%{module}-%{version}.tar.gz
-# Source0-md5:	f5a0227cb1c34a0e7d5b7f9cd2ae3135
+# Source0-md5:	1e8756f719d746e2fc0dd28b41251356
 URL:		http://pypi.python.org/pypi/decorator/
 BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
-%pyrequires_eq	python-libs
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +31,6 @@ redirecting_stdout, locked...
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__python} setup.py install \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
