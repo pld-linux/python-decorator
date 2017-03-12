@@ -2,18 +2,19 @@
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
 %bcond_without	python3	# CPython 3.x module
+%bcond_without	tests	# test suite
 
 %define		module decorator
 Summary:	Bunch of nice decorators for Python 2
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona 2
 Name:		python-%{module}
-Version:	4.0.9
-Release:	2
+Version:	4.0.11
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.python.org/simple/decorator/
-Source0:	https://pypi.python.org/packages/source/d/decorator/%{module}-%{version}.tar.gz
-# Source0-md5:	f12c5651ccd707e12a0abaa4f76cd69a
+Source0:	https://files.pythonhosted.org/packages/source/d/decorator/%{module}-%{version}.tar.gz
+# Source0-md5:	73644c8f0bd4983d1b6a34b49adec0ae
 URL:		https://pypi.python.org/pypi/decorator/
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.4
@@ -67,10 +68,11 @@ Dokumentacja modułu decorator w formacie PDF.
 
 %build
 %if %{with python2}
-%py_build
+%py_build %{?with_tests:test}
 %endif
+
 %if %{with python3}
-%py3_build
+%py3_build %{?with_tests:test}
 %endif
 
 %install
