@@ -8,17 +8,19 @@
 Summary:	Bunch of nice decorators for Python 2
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona 2
 Name:		python-%{module}
-Version:	4.0.11
-Release:	2
+Version:	4.3.0
+Release:	1
 License:	BSD
 Group:		Libraries/Python
-#Source0Download: https://pypi.python.org/simple/decorator/
+#Source0Download: https://pypi.org/simple/decorator/
 Source0:	https://files.pythonhosted.org/packages/source/d/decorator/%{module}-%{version}.tar.gz
-# Source0-md5:	73644c8f0bd4983d1b6a34b49adec0ae
-URL:		https://pypi.python.org/pypi/decorator/
+# Source0-md5:	249e7299b9b4bced0c382343f84eb1c0
+Source1:	http://media.readthedocs.org/pdf/decorator/%{version}/decorator.pdf
+# Source1-md5:	a9c2e0abcc66ba9533b6ad635408a2f3
+URL:		https://pypi.org/project/decorator/
 %if %{with python2}
-BuildRequires:	python-devel >= 1:2.4
-BuildRequires:	python-modules >= 1:2.4
+BuildRequires:	python-devel >= 1:2.6
+BuildRequires:	python-modules >= 1:2.6
 BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
@@ -27,7 +29,7 @@ BuildRequires:	python3-modules >= 1:3.2
 BuildRequires:	python3-setuptools
 %endif
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.710
+BuildRequires:	rpmbuild(macros) >= 1.714
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -65,6 +67,8 @@ Dokumentacja modułu decorator w formacie PDF.
 
 %prep
 %setup -q -n %{module}-%{version}
+
+cp -p %{SOURCE1} docs
 
 %build
 %if %{with python2}
@@ -110,4 +114,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files doc
 %defattr(644,root,root,755)
-%doc documentation.pdf
+%doc docs/decorator.pdf
