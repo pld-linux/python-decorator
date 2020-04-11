@@ -8,15 +8,15 @@
 Summary:	Bunch of nice decorators for Python 2
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona 2
 Name:		python-%{module}
-Version:	4.4.0
-Release:	2
+Version:	4.4.2
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/decorator/
 Source0:	https://files.pythonhosted.org/packages/source/d/decorator/%{module}-%{version}.tar.gz
-# Source0-md5:	a565a98581c0d110bc247323e89df9b1
+# Source0-md5:	d83c624cce93e6bdfab144821b526e1d
 Source1:	https://raw.githubusercontent.com/micheles/decorator/%{version}/docs/documentation.md
-# Source1-md5:	854f55d03fd6453846d079f22693f45c
+# Source1-md5:	e98a2c67526f4fb98053399c2de83f11
 URL:		https://pypi.org/project/decorator/
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.6
@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.md LICENSE.txt README.md
+%doc CHANGES.md LICENSE.txt README.rst
 %{py_sitescriptdir}/decorator.py[co]
 %{py_sitescriptdir}/decorator-%{version}-py*.egg-info
 %endif
@@ -106,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %files -n python3-%{module}
 %defattr(644,root,root,755)
-%doc CHANGES.md LICENSE.txt README.md
+%doc CHANGES.md LICENSE.txt README.rst
 %{py3_sitescriptdir}/decorator.py
 %{py3_sitescriptdir}/__pycache__/decorator.cpython-*.py[co]
 %{py3_sitescriptdir}/decorator-%{version}-py*.egg-info
