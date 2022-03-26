@@ -8,6 +8,7 @@
 Summary:	Bunch of nice decorators for Python 2
 Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona 2
 Name:		python-%{module}
+# keep 4.x here for python2 support
 Version:	4.4.2
 Release:	4
 License:	BSD
