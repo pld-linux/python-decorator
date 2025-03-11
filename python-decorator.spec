@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona 2
 Name:		python-%{module}
 # keep 4.x here for python2 support
 Version:	4.4.2
-Release:	6
+Release:	7
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/decorator/
