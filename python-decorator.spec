@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
-%bcond_without	python3	# CPython 3.x module
+%bcond_with	python3	# CPython 3.x module (built from python3-decorator.spec)
 %bcond_without	tests	# test suite
 
 %define		module decorator
@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Zbiór ładnych dekoratorów dla Pythona 2
 Name:		python-%{module}
 # keep 4.x here for python2 support
 Version:	4.4.2
-Release:	7
+Release:	8
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/decorator/
